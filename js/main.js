@@ -124,9 +124,7 @@ function placeSet(n){
             let topFog=Math.floor(Math.random()*container.clientHeight);
             // let widthFog=Math.floor(Math.random()*50);
             let timeFog=Math.floor(Math.random()*30+5);
-            console.log(timeFog);
             let blurFog=Math.floor(Math.random()*30);
-            console.log(leftFog);
             let div=document.createElement('div');
             div.classList.add('fog');
             div.style.left = leftFog + 'px';
@@ -147,7 +145,6 @@ function placeSet(n){
             let topSakura=Math.floor(Math.random()*container.clientHeight);
             let widthSakura=Math.floor(Math.random()*50);
             let timeSakura=Math.floor(Math.random()*30+8);
-            console.log(leftSakura);
             let div=document.createElement('div');
             div.classList.add('sakura');
             div.style.left = leftSakura + 'px';
@@ -167,9 +164,7 @@ function placeSet(n){
             let topSnow=Math.floor(Math.random()*container.clientHeight);
             let widthSnow=Math.floor(Math.random()*50);
             let timeSnow=Math.floor(Math.random()*5+5);
-            console.log(timeSnow);
             let blurSnow=Math.floor(Math.random()*30);
-            console.log(leftSnow);
             let div=document.createElement('div');
             div.classList.add('snow');
             div.style.left = leftSnow + 'px';
@@ -200,4 +195,12 @@ function sakuraSet(){
         let Sakura=document.getElementsByClassName("sakura");
         Sakura[i].style.display= "none";
     }
+}
+// game
+let continue_game=document.querySelector('.container_game');
+function changeready(id){
+        continue_game.classList.toggle('activess');
+}
+function changepause(id){
+    continue_game.classList.remove('activess');
 }
