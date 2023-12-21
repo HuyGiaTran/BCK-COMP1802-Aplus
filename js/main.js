@@ -196,11 +196,19 @@ function sakuraSet(){
         Sakura[i].style.display= "none";
     }
 }
-// game
-let continue_game=document.querySelector('.container_game');
-function changeready(id){
-        continue_game.classList.toggle('activess');
+//animation
+let animation=document.getElementsByClassName("containers");
+anima_pos();
+function anima_pos(){
+    setTimeout(Animation2Set,0);
+    setTimeout(Animation1Set,7000);
+    setTimeout(anima_pos,14000);
 }
-function changepause(id){
-    continue_game.classList.remove('activess');
+function Animation1Set(){
+    animation[0].style.display="none";
+    animation[1].style.display="block";
+}
+function Animation2Set(){
+    animation[1].style.display="none";
+    animation[0].style.display="block";
 }

@@ -542,6 +542,7 @@ h1{
     background-image: url(fog.png);
     background-size: cover;
     animation: animationfog 7s ease-in-out infinite;
+    z-index: 1;
 }
 @keyframes animationfog{
     0%{
@@ -556,40 +557,6 @@ h1{
 .border-about{
     border-top: 10px solid rgba(122, 118, 118, 0.5);
 }
-.header-game{
-    width: 100%;
-}
-#about-game{
-    display: flex;
-    text-align: center;
-}
-/* game */
-.ready{
-    background-color:#a56607;
-}
-/* html.activess{
-    overflow: hidden;
-} */
-.container_game{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity:0;
-    /* display: none; */
-}
-.nav_game{
-    /* display: flex; */
-    text-align: center;
-    align-items: center;
-}
-.container_game.activess{
-    background-color: #000;
-    opacity: 1;
-    z-index: 100000;
-}
-
 html,
 body {
   height: 100%;
@@ -610,8 +577,7 @@ body {
 
 #score {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  right: 90%;
   font-size: 2em;
   font-weight: 900;
 }
@@ -647,5 +613,52 @@ body {
   opacity: 0;
   transition: opacity 2s;
 }
+/* start animation */
 
-
+.ani1{
+    background: url('/img/car.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 53px;
+    position: absolute;
+    bottom: 0;
+    left: 43%;
+    animation: car 7s linear infinite;
+    display: none;
+}
+@keyframes car{
+    0%{
+        bottom: 0;
+        left: 43%;
+    }
+    100%{
+        bottom: 0;
+        left: 15%;
+    }
+}
+.ani2{
+    background: url('/img/plane.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    transform: scale(1);
+    top:-50%;
+    left: 15%;
+    position: absolute;
+    z-index: 10;
+    transform: rotate(-10deg);
+    display: none;
+    animation: plane 7s linear infinite;
+}
+@keyframes plane{
+    0%{
+        top:-100%;
+        left: 15%;
+    }
+    100%{
+        top:-300%;
+        left: 40%;
+    }
+}
