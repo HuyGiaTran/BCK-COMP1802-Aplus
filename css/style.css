@@ -150,6 +150,7 @@ h1{
     .sticky-top.navbar-light {
         position: fixed;
         background: #FFFFFF;
+        color: #000;
     }
 
     .navbar-light .navbar-nav .nav-link::before {
