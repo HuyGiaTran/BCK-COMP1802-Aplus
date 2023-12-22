@@ -575,6 +575,14 @@ body {
   height: 100%;
 }
 
+canvas#game {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border: 10px solid rgb(180, 138, 13);
+    width: 90%;
+}
+
 #score {
   position: absolute;
   right: 90%;
@@ -616,7 +624,7 @@ body {
 /* start animation */
 
 .ani1{
-    background: url('/img/car.gif');
+    background:url(../img/car.gif);
     background-repeat: no-repeat;
     background-size: cover;
     width: 200px;
@@ -638,7 +646,7 @@ body {
     }
 }
 .ani2{
-    background: url('/img/plane.gif');
+    background:url(../img/plane.gif);
     background-repeat: no-repeat;
     background-size: cover;
     width: 300px;
